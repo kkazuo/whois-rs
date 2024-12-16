@@ -3,7 +3,7 @@ name = "whois-rs"
 version = "1.6.1"
 authors = ["Magic Len <len@magiclen.org>", "Cycle Five <cycle.five@proton.me>"]
 edition = "2021"
-rust-version = "1.70"
+rust-version = "1.71"
 repository = "https://github.com/cycle-five/whois-rust"
 keywords = ["whois"]
 categories = ["web-programming::websocket"]
@@ -22,10 +22,15 @@ tokio = { version = "1", features = ["fs", "net", "time", "io-util"], optional =
 [dev-dependencies]
 tokio = { version = "1", features = ["macros", "rt"] }
 
+# This is a fork of the validators crate
 [dependencies.validators]
-version = "0.25"
+version = "0.25.3"
 default-features = false
 features = ["derive", "host"]
 
 [package.metadata.docs.rs]
 all-features = true
+
+# patch for validators to use the forked validators crate
+[patch.crates-io]
+validators = {git = "https://github.com/cycle-five/validators-rs", branch = "master", version = "0.25.3"}
