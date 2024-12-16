@@ -2,7 +2,7 @@ use whois_rust::*;
 
 #[test]
 fn test() {
-    let who = WhoIs::from_path("node-whois/servers.json").unwrap();
+    let who = WhoIs::from_path("data/servers.json").unwrap();
 
     let result = who.lookup(WhoIsLookupOptions::from_string("magiclen.org").unwrap()).unwrap();
     println!("{}", result);
@@ -24,7 +24,7 @@ fn test_srv() {
 #[cfg(feature = "tokio")]
 #[tokio::test]
 async fn test_async() {
-    let who = WhoIs::from_path_async("node-whois/servers.json").await.unwrap();
+    let who = WhoIs::from_path_async("data/servers.json").await.unwrap();
 
     let result =
         who.lookup_async(WhoIsLookupOptions::from_string("magiclen.org").unwrap()).await.unwrap();
