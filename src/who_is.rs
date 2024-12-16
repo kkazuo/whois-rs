@@ -13,7 +13,7 @@ use regex::Regex;
 use serde_json::{Map, Value};
 #[cfg(feature = "tokio")]
 use tokio::io::{AsyncReadExt, AsyncWriteExt};
-use trust_dns_client::{
+use hickory_client::{
     client::{Client, SyncClient},
     op::DnsResponse,
     rr::{DNSClass, Name, RData, Record, RecordType},
