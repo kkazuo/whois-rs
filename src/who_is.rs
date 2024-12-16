@@ -8,17 +8,17 @@ use std::{
     time::Duration,
 };
 
-use once_cell::sync::Lazy;
-use regex::Regex;
-use serde_json::{Map, Value};
-#[cfg(feature = "tokio")]
-use tokio::io::{AsyncReadExt, AsyncWriteExt};
 use hickory_client::{
     client::{Client, SyncClient},
     op::DnsResponse,
     rr::{DNSClass, Name, RData, Record, RecordType},
     udp::UdpClientConnection,
 };
+use once_cell::sync::Lazy;
+use regex::Regex;
+use serde_json::{Map, Value};
+#[cfg(feature = "tokio")]
+use tokio::io::{AsyncReadExt, AsyncWriteExt};
 use validators::{models::Host, prelude::*};
 
 use crate::{WhoIsError, WhoIsLookupOptions, WhoIsServerValue};
