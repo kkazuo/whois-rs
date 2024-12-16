@@ -1,4 +1,4 @@
-use whois_rust::*;
+use whois_rs::*;
 
 #[test]
 fn test() {
