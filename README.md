@@ -1,9 +1,12 @@
 WHOIS Rust
 ====================
 
-[![CI](https://github.com/magiclen/whois-rust/actions/workflows/ci.yml/badge.svg)](https://github.com/magiclen/whois-rust/actions/workflows/ci.yml)
+[![CI](https://github.com/cycle-five/whois-rs/actions/workflows/ci.yml/badge.svg)](https://github.com/cycle-five/whois-rs/actions/workflows/ci.yml)
 
-This is a WHOIS client library for Rust, inspired by https://github.com/hjr265/node-whois
+This is a WHOIS client library for Rust.
+
+Inspired by https://github.com/hjr265/node-whois.
+Forked from https://github.com/magiclen/whois-rust.
 
 ## Usage
 
@@ -57,11 +60,11 @@ After enabling the async feature, the `from_path_async` function and the `lookup
 ## Testing
 
 ```bash
-# git clone --recurse-submodules git://github.com/magiclen/whois-rust.git
+# git clone --recurse-submodules git://github.com/cycle-five/whois-rs.git
 
-git clone git://github.com/magiclen/whois-rust.git
+git clone git://github.com/cycle-five/whois-rs.git
 
-cd whois-rust
+cd whois-rs
 
 git submodule init
 git submodule update --recursive
@@ -71,11 +74,11 @@ cargo test
 
 ## Crates.io
 
-https://crates.io/crates/whois-rust
+https://crates.io/crates/whois-rs
 
 ## Documentation
 
-https://docs.rs/whois-rust
+https://docs.rs/whois-rs
 
 ## License
 
