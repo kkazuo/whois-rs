@@ -73,6 +73,7 @@ pub extern crate tokio;
 
 mod target;
 mod who_is;
+mod who_is_default;
 mod who_is_error;
 mod who_is_host;
 mod who_is_lookup_options;

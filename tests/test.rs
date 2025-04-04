@@ -12,6 +12,16 @@ fn test() {
 }
 
 #[test]
+fn test_default() {
+    let who = WhoIs::default();
+
+    let result = who.lookup(WhoIsLookupOptions::from_string("magiclen.org").unwrap()).unwrap();
+    println!("{}", result);
+    let found = result.find("Domain Name: magiclen.org");
+    assert!(found.is_some());
+}
+
+#[test]
 fn test_srv() {
     let mut who = WhoIs::from_host("whois.arin.net").unwrap();
 
